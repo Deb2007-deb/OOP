@@ -44,7 +44,7 @@ int main()
     cout << "Enter number of employees: ";
     cin >> numEmployees;
 
-    // Dynamically allocate memory for the array at runtime
+    
     Employee* staffList = new Employee[numEmployees]; 
 
     for (int i = 0; i < numEmployees; i++)
