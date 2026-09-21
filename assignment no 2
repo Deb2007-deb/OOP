@@ -49,7 +49,7 @@ int main()
         cout << "Enter ID: ";
         cin >> id;
 
-        cin.ignore(); // Clears the newline buffer before getline
+        cin.ignore(); 
 
         cout << "Enter Name: ";
         getline(cin, name);
