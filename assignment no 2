@@ -11,7 +11,7 @@ private:
     string grade;
 
 public:
-    // Method to set student details
+    
     void setDetails(int studentId, string studentName, string studentGrade) 
     {
         id = studentId;
@@ -19,7 +19,7 @@ public:
         grade = studentGrade;
     }
 
-    // Method to display information for administrative staff
+    
     void displayInfo() const 
     {
         cout << "ID: " << id << "\n"
@@ -36,7 +36,7 @@ int main()
     cout << "Enter number of students: ";
     cin >> numStudents;
 
-    // Dynamically allocate array memory safely without vector
+    
     Student* studentList = new Student[numStudents];
 
     for (int i = 0; i < numStudents; i++) 
@@ -66,7 +66,7 @@ int main()
         studentList[i].displayInfo();
     }
 
-    // Deallocate memory to prevent memory leaks
+    
     delete[] studentList;
 
     return 0;
