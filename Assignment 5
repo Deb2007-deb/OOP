@@ -39,3 +39,4 @@ student student1(101, "deb", "AIDS");
 student1.displayDetails();
 
 return 0;
+}
