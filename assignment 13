@@ -1,0 +1,52 @@
+
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+
+int main()
+{
+    int roll;
+    string name;
+    float marks;
+    
+    
+    ofstream file("student.txt", ios::app); 
+    
+    cout << "enter Roll number:";
+    cin >> roll;
+    
+    cout << "enter student name:"; 
+    cin >> ws;
+    getline(cin, name);
+    
+    cout << "enter marks:";
+    cin >> marks;
+    
+    file << roll << endl;
+    file << name << endl;
+    file << marks << endl;
+    file.close(); 
+    
+    cout << "\n Student record saved successfully!" << endl;
+    
+   
+    ifstream readFile("student.txt"); 
+    
+   
+    cout << "\n student.Records:" << endl; 
+    
+    while(readFile >> roll)
+    {
+        readFile >> ws; 
+        getline(readFile, name);
+        readFile >> marks;
+        
+        cout << "\nRoll Number:" << roll;
+        cout << "\nName :" << name;
+        cout << "\nMarks :" << marks << endl; 
+    }
+    
+    readFile.close();
+    return 0;
+}
